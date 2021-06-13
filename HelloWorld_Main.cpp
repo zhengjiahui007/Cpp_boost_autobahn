@@ -85,8 +85,8 @@ int main(int argc, char** argv)
     try {
         auto parameters = get_parameters(argc, argv);
 
-        boost::asio::io_service io;
-        bool debug = parameters->debug();
+           boost::asio::io_service io;
+          bool debug = parameters->debug();
 
         auto transport = std::make_shared<autobahn::wamp_tcp_transport>(
             io, parameters->rawsocket_endpoint(), debug);
