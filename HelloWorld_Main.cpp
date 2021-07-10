@@ -1,4 +1,4 @@
-#if 0
+#if 1
 #include<stdio.h>
 #include<memory>
 #include<iostream>
@@ -12,16 +12,7 @@
 #include<boost\autobahn\autobahn.hpp>
 #endif
 #include "parameters.hpp"
-
-#include <boost\autobahn\autobahn.hpp>
-#include <boost\asio.hpp>
-#include <boost\version.hpp>
-#include <chrono>
-#include <iostream>
-#include <memory>
-#include <string>
-#include <tuple>
-
+#include<boost\version.hpp>
 
 
 using namespace std;
@@ -54,7 +45,7 @@ int main(int argc, char** argv)
 	cout << "p3 = " << p3 << endl;
 	cout << "*p3 = " << *p3 << endl;
 
-#if 0
+#if 1
 	boost::asio::deadline_timer timer1(io_service, boost::posix_time::seconds(5));
 	timer1.async_wait(handler1);
 	boost::asio::deadline_timer timer2(io_service, boost::posix_time::seconds(10));
@@ -79,13 +70,13 @@ int main(int argc, char** argv)
 	}
 #endif
 
-#if 0
+#if 1
     std::cerr << "Boost: " << BOOST_VERSION << std::endl;
 
     try {
         auto parameters = get_parameters(argc, argv);
 
-           boost::asio::io_service io;
+          boost::asio::io_service io;
           bool debug = parameters->debug();
 
         auto transport = std::make_shared<autobahn::wamp_tcp_transport>(
