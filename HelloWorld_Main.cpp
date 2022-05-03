@@ -25,7 +25,7 @@ void handler1(const boost::system::error_code& ec)
 
 void handler2(const boost::system::error_code& ec)
 {
-	std::cout << "10 s." << std::endl;
+	 std::cout << "10 s." << std::endl;
 }
 
 
